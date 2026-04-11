@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMART PRODUCTIVITY DASHBOARD</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+<div class="logo">SMART-DASHBOARD</div>
+<nav>
+<ul>
+<li onclick="showSection('dashboard')">Dashboard</li>
+<li onclick="showSection('users')">Users</li>
+<li onclick="showSection('weather')">Weather</li>
+<li onclick="showSection('tasks')">Tasks</li>
+<li onclick="showSection('products')">Products</li>
+</ul>
+</nav>
+</header>
+<main>
+<!-- DASHBOARD -->
+<section id="dashboard" class="section active">
+<div class="hero">
+<h1>SMART PRODUCTIVITY DASHBOARD</h1>
+<p>Analyze Users • Predict Weather • Manage Tasks • Search Products</p>
+</div>
+<div class="feature-cards">
+<div class="feature-card" onclick="showSection('users')">
+<h2>👤 User Analyzer</h2>
+<p>
+Generate random users using API and analyze profile information including name,
+email and location dynamically.
+</p>
+</div>
+<div class="feature-card" onclick="showSection('weather')">
+<h2>🌦 Weather Prediction</h2>
+<p>
+Search any city and get real-time weather insights including temperature and
+wind speed using API integration.
+</p>
+</div>
+<div class="feature-card" onclick="showSection('tasks')">
+<h2>📝 To-Do Manager</h2>
+<p>
+Create and manage daily tasks. Add tasks, track pending work and improve
+productivity easily.
+</p>
+</div>
+<div class="feature-card" onclick="showSection('products')">
+<h2>🔎 Product Finder</h2>
+<p>
+Search products instantly using live filtering and explore results dynamically
+with DOM manipulation.
+</p>
+</div>
+</div>
+</section>
+<!-- RANDOM USER -->
+<section id="users" class="section">
+<h1>Random User Generator</h1>
+<button class="btn" onclick="generateUser()">Generate User</button>
+<div id="userContainer"></div>
+</section>
+<!-- WEATHER -->
+<section id="weather" class="section">
+<h1>Weather Intelligence</h1>
+<input id="cityInput" placeholder="Enter city">
+<button class="btn" onclick="getWeather()">Check</button>
+<div id="weatherResult"></div>
+</section>
+<!-- TASK MANAGER -->
+<section id="tasks" class="section">
+<h1>Task Manager</h1>
+<input id="taskInput" placeholder="Enter new task">
+<button class="btn" onclick="addTask()">Add Task</button>
+<ul id="taskList"></ul>
+</section>
+<!-- PRODUCT SEARCH -->
+<section id="products" class="section">
+<h1>Live Product Search</h1>
+<input id="searchBox" onkeyup="filterProducts()" placeholder="Search product">
+<ul id="productList">
+<li>Laptop</li>
+<li>Phone</li>
+<li>Headphones</li>
+<li>Keyboard</li>
+<li>Mouse</li>
+<li>Camera</li>
+<li>Smartwatch</li>
+<li>Tablet</li>
+<li>Speaker</li>
+<li>Monitor</li>
+</ul>
+</section>
+</main>
+<footer>
+<div class="footer-container">
+<div>
+<h3>SmartDash</h3>
+<p>Interactive Data Dashboard</p>
+</div>
+<div>
+<h3>Features</h3>
+<p>Random User Generator</p>
+<p>Weather Intelligence</p>
+<p>Task Manager</p>
+</div>
+<div>
+<h3>Developer</h3>
+<p>Academic Project</p>
+<p>2026</p>
+</div>
+</div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
