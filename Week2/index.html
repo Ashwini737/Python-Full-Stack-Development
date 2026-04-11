@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Student Utility Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav>
+    <div><h3><b>SMART UTILITY:</b></h3></div>
+    <ul>
+        <li><a href="#grade">GRADE</a></li>
+        <li><a href="#palindrome">PALINDROME</a></li>
+        <li><a href="#number">NUMBER</a></li>
+        <li><a href="#login">LOGIN</a></li>
+    </ul>
+    <button id="modeBtn" onclick="toggleMode()"><b>DARK MODE</b></button>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1 style="color:lightblue">SMART STUDENT UTILITY WEB APPLICATION</h1>
+</section>
+
+<!-- GRADE CALCULATOR -->
+<section id="grade" class="card">
+    <h2 style="color:rgb(1, 1, 91)">STUDENT GRADE CALCULATOR</h2>
+    <input type="text" id="studentName" placeholder="Student Name">
+    <div class="grid">
+        <input type="number" id="m1" placeholder="PHYSICS">
+        <input type="number" id="m2" placeholder="CHEMISTRY">
+        <input type="number" id="m3" placeholder="MATHEMATICS">
+        <input type="number" id="m4" placeholder="BIOLOGY">
+        <input type="number" id="m5" placeholder="KANNADA">
+    </div>
+
+    <div class="btn-group">
+        <button onclick="calculateGrade()">RESULT</button>
+        <button class="reset" onclick="resetGrade()">RESET</button>
+    </div>
+
+    <div id="gradeResult" class="result-box"></div>
+</section>
+
+<!-- PALINDROME-->
+<section id="palindrome" class="card">
+    <h2 style="color:rgb(1, 1, 91)">PALINDROME CHECKER</h2>
+
+    <input type="text" id="palWord" placeholder="ENTER WORD">
+
+    <div class="btn-group">
+        <button onclick="checkPalindrome()">RESULT</button>
+        <button class="reset" onclick="resetPalindrome()">RESET</button>
+    </div>
+
+    <div id="palResult" class="result-box"></div>
+</section>
+
+<!-- NUMBER ANALYZER -->
+<section id="number" class="card">
+    <h2 style="color:rgb(1, 1, 91)">NUMBER ANALYZER</h2>
+
+    <input type="number" id="numInput" placeholder="ENTER NUMBER">
+
+    <div class="btn-group">
+        <button onclick="analyzeNumber()">RESULT</button>
+        <button class="reset" onclick="resetNumber()">RESET</button>
+    </div>
+
+    <div id="numResult" class="result-box"></div>
+</section>
+
+<!-- LOGIN -->
+<section id="login" class="card">
+    <h2 style="color:rgb(1, 1, 91)">LOGIN VALIDATION</h2>
+
+    <input type="text" id="username" placeholder="USER_NAME">
+    <input type="password" id="password" placeholder="PASSWORD">
+
+    <div class="btn-group">
+        <button onclick="validateLogin()">RESULT</button>
+        <button class="reset" onclick="resetLogin()">RESET</button>
+    </div>
+
+    <div id="loginResult" class="result-box"></div>
+</section>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Smart Utility</h3>
+            <p>
+                Smart Student Utility Web App is an interactive dashboard
+                built using HTML, CSS and JavaScript. It includes multiple
+                tools like Grade Calculator, Palindrome Checker,
+                Number Analyzer and Login Validation.
+            </p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#grade">Grade Calculator</a></li>
+                <li><a href="#palindrome">Palindrome Checker</a></li>
+                <li><a href="#number">Number Analyzer</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: smartutility@gmail.com</p>
+            <p>Phone: +91 6363045806</p>
+            <p>Location: India</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        Smart Student Utility Dashboard
+    </div>
+</footer> 
+
+<script src="script.js"></script>
+</body>
+</html>
