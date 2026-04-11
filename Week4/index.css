@@ -1,0 +1,52 @@
+:root{
+--primary:#8b7cf6;     
+--secondary:#6ea8fe;   
+--accent:#9ee6c3;      
+--bg:#f6f4ff;
+--card:#ffffff;
+--text:#2d2d2d;
+--shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.dark{
+--bg:#1e1e2f;
+--card:#2b2b3c;
+--text:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+
+background:linear-gradient(
+270deg,
+var(--primary),
+var(--secondary),
+var(--accent),
+var(--primary)
+);
+
+background-size:400% 400%;
+animation:gradientMove 10s ease infinite;
+}
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
